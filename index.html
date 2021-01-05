@@ -4,13 +4,90 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="On vous propose de commander votre repas dans les meilleurs restaurants parisiens">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.css">
         <link rel="icon" href="images/logo/ohmyfood@2x.svg">
         <title>OhMyFood le site pour commander dans les meilleurs restaurants parisiens</title>
     </head>
 
     <body>
-        
+        <header>
+            <h1><img src="images/logo/ohmyfood.png" alt="Logo de l'entreprise" id="header_logo"></h1>
+        </header>
+
+        <section id="section_presentation-site_research">
+            <div id="research_city">
+                <div>
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div id="zone_research_city">
+                    Paris, Belleville
+                </div>
+            </div>
+            <div id="information_site_restaurant">
+                <h2 class="title_h2_index">
+                    Réservez le menu qui vous convient
+                </h2>
+                <p id="text_information">
+                    Découvrez des restaurants d'exeption, séléctionnés par nos soins.
+                </p>
+                <input type="button" value="Explorez nos restaurants" id="button_research_restaurant">
+            </div>        
+        </section>
+
+        <section id="section_functioning">
+            <h2 class="title_h2_index">
+                Fonctionnement
+            </h2>
+            <div class="box_functioning">
+                <p class="number_functioning">
+                    1
+                </p>
+                <i class="fas fa-mobile-alt"></i>
+                <p class="information_functioning">
+                    Choisissez un restaurant
+                </p>
+            </div>
+            <div class="box_functioning">
+                <p class="number_functioning">
+                    2
+                </p>
+                <i class="fas fa-list-ul"></i>
+                <p class="information_functioning">
+                    Composez votre menu
+                </p>
+            </div>
+            <div class="box_functioning">
+                <p class="number_functioning">
+                    3
+                </p>
+                <i class="fas fa-store"></i>
+                <p class="information_functioning">
+                    Dégustez au restaurant
+                </p>
+            </div>
+        </section>
+
+        <section id="listing_restaurants">
+            <h2 class="title_h2_index">
+                Restaurants
+            </h2>
+            <div class="box_restaurant">
+                <img src="images/restaurants/la_palettedu_gout_jay-wennington.jpg" alt="image du restaurant La Palette du goût" class="img_restaurant">
+                <div class="information_restaurant_heart">
+                    <div class="name_localisation">
+                        <h3 class="name_restaurant">
+                            La palette du goût
+                        </h3>
+                        <p class="city_restaurant">
+                            Ménilmontant
+                        </p>
+                    </div>
+                    <i class="far fa-heart"></i>
+                </div>
+
+            </div>
+        </section>
+
     </body>
 </html>

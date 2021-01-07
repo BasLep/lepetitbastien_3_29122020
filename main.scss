@@ -4,6 +4,11 @@
     font-family: 'Roboto';
     src: url(Roboto/Roboto-Regular.ttf) format('truetype');
 }
+@font-face
+{
+    font-family: 'Shrikhand';
+    src: url(Shrikhand/Shrikhand-Regular.ttf) format('truetype');
+}
 body
 {
     margin: 0; padding: 0;
@@ -20,6 +25,7 @@ $magenta-light: #FF79DA ; /* secondary color */
 $green-cyan: #99E2D0 ; /* tertiary color */ 
 $color-shadow: #d4d4d4 ;
 $grey-dark: #7e7e7e ;
+$color_footer: #353535 ;
 
 .title_h2_index
 {
@@ -95,6 +101,11 @@ Section présentation du site et la recherche de ville */
         box-shadow: 5px 5px 5px $color-shadow;
         border: none;
         background: linear-gradient(to bottom, $magenta-light, $blue-magenta);
+        &:hover
+        {
+            opacity: 0.8;
+            box-shadow: 10px 10px 5px $color-shadow;
+        }
     }
 }
 #section_functioning
@@ -149,6 +160,7 @@ Section présentation du site et la recherche de ville */
 {                
     padding-left: 20px;
     background-color: $grey-more-light;
+    margin-bottom: 70px;
     .title_h2_index
     {
         padding-top: 60px;
@@ -163,10 +175,12 @@ Section présentation du site et la recherche de ville */
     height: 250px;
     background-color: $white;
     border-radius: 20px;
+    margin-bottom: 15px;
+    box-shadow: 5px 5px 5px $color-shadow;
     .img_restaurant
     {
         object-fit: cover;
-        height: calc(100% - 80px);
+        height: calc(100% - 70px);
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
     }
@@ -181,5 +195,54 @@ Section présentation du site et la recherche de ville */
     {
         display: flex;
         flex-direction: column;
+        padding-left: 15px;
+        padding-top: 20px;        
+        .name_restaurant
+        {
+            margin: 0;
+            font-size: medium;
+            margin-bottom: 3px;
+        }
+    }
+    .far.fa-heart
+    {
+        padding-right: 20px;
+        font-size: larger;
+        &:active
+        {
+            background: linear-gradient(to bottom, $magenta-light, $blue-magenta);
+        }
+    }
+}
+footer
+{
+    background-color: $color_footer;
+}    
+#footer_limit
+{
+    max-width: 1440px;
+    padding: 20px ;
+    color: $white;
+    #name_logo_footer
+    {
+    margin: 0;
+    font-family: 'Shrikhand';    
+    font-weight: unset;
+    margin-bottom: 20px;
+    font-size: medium;
+    }
+    .box_icon_txt, .box_only_txt
+    {
+        display: flex;
+        font-size: smaller;
+        margin-bottom: 10px;
+        p
+        {
+            padding-left: 10px;
+        }
+    }
+    .fa-utensils, .fa-hands-helping
+    {
+       font-size: small;
     }
 }

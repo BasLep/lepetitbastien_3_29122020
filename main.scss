@@ -105,6 +105,7 @@ Section présentation du site et la recherche de ville */
         {
             opacity: 0.8;
             box-shadow: 10px 10px 5px $color-shadow;
+            cursor: pointer;
         }
     }
 }
@@ -206,13 +207,23 @@ Section présentation du site et la recherche de ville */
     }
     .far.fa-heart
     {
-        padding-right: 20px;
+        margin-right: 20px;
         font-size: larger;
+        &:hover
+        {
+            cursor: pointer;
+        }
         &:active
         {
             background: linear-gradient(to bottom, $magenta-light, $blue-magenta);
         }
     }
+}
+a:hover, a:link, a:visited
+{
+    text-decoration: none;
+    outline: none;
+    color: black;
 }
 footer
 {

@@ -173,42 +173,55 @@ Section présentation du site et la recherche de ville */
     display: flex;
     flex-direction: column;
     width: calc(100% - 20px);
-    height: 250px;
     background-color: $white;
+
     border-radius: 20px;
     margin-bottom: 15px;
     box-shadow: 5px 5px 5px $color-shadow;
+}
+.box_img_link
+{    
+    height: 180px;
     .img_restaurant
     {
-        object-fit: cover;
-        height: calc(100% - 70px);
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height: calc(100% - 15px);
     }
 }
+
 .information_restaurant_heart
 {
     display:flex ;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     .name_localisation
     {
         display: flex;
         flex-direction: column;
         padding-left: 15px;
-        padding-top: 20px;        
+        padding-bottom: 15px;        
         .name_restaurant
         {
             margin: 0;
-            font-size: medium;
+            font-size: large;
             margin-bottom: 3px;
+        }
+        .city_restaurant
+        {
+            font-size: medium;
         }
     }
     .far.fa-heart
     {
-        margin-right: 20px;
-        font-size: larger;
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        font-size: x-large;
         &:hover
         {
             cursor: pointer;

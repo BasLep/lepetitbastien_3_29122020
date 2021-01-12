@@ -31,30 +31,53 @@ p {
   margin: 0;
 }
 
+header, #section_functioning, .title_h2_index, .box_restaurant {
+  max-width: 1440px;
+}
+
+/* formatting base button */
+.button_page {
+  color: #FFFFFF;
+  border-radius: 50px;
+  -webkit-box-shadow: 5px 5px 5px #d4d4d4;
+          box-shadow: 5px 5px 5px #d4d4d4;
+  border: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+}
+
+.button_page:hover {
+  opacity: 0.8;
+  -webkit-box-shadow: 10px 10px 5px #d4d4d4;
+          box-shadow: 10px 10px 5px #d4d4d4;
+  cursor: pointer;
+}
+
 /* header */
 header {
   max-width: 1440px;
+  margin-top: 20px;
+  margin-bottom: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+header .fas.fa-arrow-left {
+  color: #353535;
+  font-size: large;
+  padding-top: 11px;
+  margin-right: 50px;
 }
 
 header h1 {
   margin: 0;
-  margin-top: 20px;
-  margin-bottom: 5px;
-}
-
-header #header_logo {
-  width: 160px;
-  height: 25px;
+  font-family: 'Shrikhand';
+  font-size: 1.70em;
 }
 
 /* body 
-Section présentation du site et la recherche de ville */
+Section site presentation et research city and restaurant*/
 #research_city {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -108,23 +131,9 @@ Section présentation du site et la recherche de ville */
 }
 
 #information_site_restaurant #button_research_restaurant {
-  color: #FFFFFF;
   height: 50px;
   width: 200px;
   font-weight: bold;
-  border-radius: 50px;
-  -webkit-box-shadow: 5px 5px 5px #d4d4d4;
-          box-shadow: 5px 5px 5px #d4d4d4;
-  border: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
-}
-
-#information_site_restaurant #button_research_restaurant:hover {
-  opacity: 0.8;
-  -webkit-box-shadow: 10px 10px 5px #d4d4d4;
-          box-shadow: 10px 10px 5px #d4d4d4;
-  cursor: pointer;
 }
 
 #section_functioning {
@@ -329,5 +338,117 @@ footer {
 
 #footer_limit .fa-utensils, #footer_limit .fa-hands-helping {
   font-size: small;
+}
+
+#footer_limit a:link, #footer_limit a:visited {
+  color: white;
+}
+
+/* page menu elements */
+.box_img_menu {
+  position: absolute;
+}
+
+.img_page_menu {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 275px;
+  width: 100%;
+}
+
+.name_restaurant_heart, .appetizer_menu, .main_course_menu, .dessert_menu {
+  min-width: 320px;
+  max-width: 1440px;
+}
+
+.section_choice_menu {
+  background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  position: relative;
+  top: 230px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+.name_restaurant_heart {
+  padding-top: 30px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.name_restaurant_heart .name_restaurant_menu {
+  font-family: 'shrikhand';
+  font-size: 1.70em;
+  margin-left: 20px;
+}
+
+.name_restaurant_heart .far.fa-heart {
+  position: absolute;
+  right: 4%;
+  font-size: x-large;
+}
+
+.title_repas {
+  margin-left: 20px;
+  border-bottom: 2px #99E2D0 solid;
+  padding-bottom: 10px;
+  padding-right: 0;
+}
+
+.box_repas {
+  background-color: #FFFFFF;
+  margin-top: 15px;
+  -webkit-box-shadow: 5px 5px 5px #d4d4d4;
+          box-shadow: 5px 5px 5px #d4d4d4;
+  border-radius: 15px;
+  margin-left: 15px;
+  width: calc(100% - 30px);
+  position: relative;
+}
+
+.box_repas .name_repas {
+  margin: 0;
+  font-size: medium;
+  padding: 12px 10px;
+}
+
+.box_repas .additional_information {
+  font-size: smaller;
+  padding: 0 0 12px 10px;
+}
+
+.box_repas .price {
+  font-size: smaller;
+  font-weight: bold;
+  position: absolute;
+  bottom: 12px;
+  right: 20px;
+}
+
+.box_command {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.box_command #button_command {
+  margin: 40px 0 60px 0;
+  height: 55px;
+  width: 185px;
+}
+
+.footer_menu {
+  position: relative;
+  top: 230px;
 }
 /*# sourceMappingURL=main.css.map */

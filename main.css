@@ -44,6 +44,8 @@ header, #section_functioning, .title_h2_index, .box_restaurant {
   border: none;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
 }
 
 .button_page:hover {
@@ -61,6 +63,9 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 header .fas.fa-arrow-left {
@@ -379,7 +384,6 @@ footer {
 
 .name_restaurant_heart {
   padding-top: 30px;
-  margin-bottom: 25px;
   position: relative;
 }
 
@@ -393,6 +397,10 @@ footer {
   position: absolute;
   right: 4%;
   font-size: x-large;
+}
+
+.appetizer_menu, .main_course_menu, .dessert_menu {
+  margin-top: 30px;
 }
 
 .title_repas {
@@ -422,6 +430,10 @@ footer {
 .box_repas .additional_information {
   font-size: smaller;
   padding: 0 0 12px 10px;
+  white-space: nowrap;
+  width: 80%;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .box_repas .price {
@@ -430,6 +442,124 @@ footer {
   position: absolute;
   bottom: 12px;
   right: 20px;
+}
+
+.box_repas:active .box_choice_food {
+  border: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 73px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #99E2D0;
+  opacity: 1;
+  -webkit-animation: appear_box_choice 0.4s forwards;
+          animation: appear_box_choice 0.4s forwards;
+}
+
+.box_repas:active .fas.fa-check-circle {
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  top: 40%;
+  -webkit-animation: circle_rotate 0.4s forwards;
+          animation: circle_rotate 0.4s forwards;
+}
+
+.box_repas:active .price {
+  -webkit-animation: price_translation 0.4s forwards;
+          animation: price_translation 0.4s forwards;
+}
+
+.box_repas:active .additional_information {
+  -webkit-animation: reduction_box 0.4s forwards;
+          animation: reduction_box 0.4s forwards;
+}
+
+.box_repas .fas.fa-check-circle {
+  display: none;
+}
+
+@-webkit-keyframes appear_box_choice {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 63px;
+    opacity: 1;
+  }
+}
+
+@keyframes appear_box_choice {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 63px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes price_translation {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-63px);
+            transform: translateX(-63px);
+  }
+}
+
+@keyframes price_translation {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-63px);
+            transform: translateX(-63px);
+  }
+}
+
+@-webkit-keyframes circle_rotate {
+  0% {
+    -webkit-transform: rotate(0) scale(1.4);
+            transform: rotate(0) scale(1.4);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1.4);
+            transform: rotate(360deg) scale(1.4);
+  }
+}
+
+@keyframes circle_rotate {
+  0% {
+    -webkit-transform: rotate(0) scale(1.4);
+            transform: rotate(0) scale(1.4);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1.4);
+            transform: rotate(360deg) scale(1.4);
+  }
+}
+
+@-webkit-keyframes reduction_box {
+  100% {
+    width: 58%;
+  }
+}
+
+@keyframes reduction_box {
+  100% {
+    width: 58%;
+  }
 }
 
 .box_command {

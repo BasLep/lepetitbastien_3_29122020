@@ -48,6 +48,7 @@ header, #section_functioning, .title_h2_index, .box_restaurant
     box-shadow: 5px 5px 5px $color-shadow;
     border: none;
     background: linear-gradient(to bottom, $magenta-light, $blue-magenta);
+    transition-duration: 400ms;
     &:hover
     {
         opacity: 0.8;
@@ -62,6 +63,7 @@ header
     margin-top: 20px;
     margin-bottom: 5px;
     display: flex;
+    justify-content: center;
     .fas.fa-arrow-left
     {
         color: $color_footer;
@@ -317,7 +319,6 @@ footer
 .name_restaurant_heart
 {
     padding-top: 30px;
-    margin-bottom: 25px;
     position: relative;
     .name_restaurant_menu
     {
@@ -331,7 +332,11 @@ footer
         right: 4%;
         font-size: x-large;
     }
-}    
+} 
+.appetizer_menu, .main_course_menu, .dessert_menu
+{
+    margin-top: 30px;
+}   
 .title_repas
 {
     margin-left: 20px ;
@@ -358,6 +363,10 @@ footer
     {
         font-size: smaller;
         padding: 0 0 12px 10px;
+        white-space: nowrap;
+        width: 80%;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
     .price
     {
@@ -367,6 +376,82 @@ footer
         bottom: 12px;
         right: 20px;
     }
+    &:active
+    {
+        .box_choice_food
+        {
+            border: none;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 73px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            background-color: $green-cyan;
+            opacity: 1;
+            animation: appear_box_choice 0.4s forwards;
+        }           
+        .fas.fa-check-circle
+        {
+            color: $white;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 40%;
+            animation: circle_rotate 0.4s forwards;
+        }
+        .price
+        {
+            animation: price_translation 0.4s forwards;
+        }
+       .additional_information
+        {
+            animation: reduction_box 0.4s forwards;
+        }
+
+    }
+    .fas.fa-check-circle
+    {
+        display: none;
+    }
+
+    @keyframes appear_box_choice {
+        0%
+        {
+            width: 0;
+        }
+        100%
+        {
+            width: 63px;
+            opacity: 1;                
+        }
+    }
+    @keyframes price_translation {
+        0%
+        {
+            transform: translateX(0);
+        }
+        100%
+        {
+            transform: translateX(-63px);
+        }
+    }
+    @keyframes circle_rotate {
+        0%
+        {
+            transform: rotate(0) scale(1.40);
+        }
+        100%
+        {
+            transform: rotate(360deg) scale(1.40);
+        }
+    }
+    @keyframes reduction_box {
+        100%
+        {
+            width: 58%;
+        }
+    } 
 }
 .box_command
 {

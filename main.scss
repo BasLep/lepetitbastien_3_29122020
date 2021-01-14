@@ -179,6 +179,16 @@ Section site presentation et research city and restaurant*/
         }
     }
 }
+.box_number_one
+{
+    animation: animation_box_number_one 1s infinite ;
+}
+@keyframes animation_box_number_one{
+    100%
+    {
+        background-color: $blue-magenta-light;
+    }
+}
 #listing_restaurants
 {                
     padding-left: 20px;
@@ -348,19 +358,17 @@ footer
 .appetizer_menu
 {
     opacity: 0;
-    animation: fadeIn_appetizer ease 3s forwards;
+    animation: fadeIn_appetizer ease 3s forwards 0.5s;
 }
 .main_course_menu
 {
     opacity: 0;
-    animation: fadeIn_maincourse ease 3s forwards;
-    animation-delay: 1s;
+    animation: fadeIn_maincourse ease 3s forwards 1.5s;
 }
 .dessert_menu
 {
     opacity: 0;
-    animation: fadeIn_dessert ease 3s forwards;
-    animation-delay: 2s;
+    animation: fadeIn_dessert ease 3s forwards 2.5s;
 }
 /* keyframes appear differents parts of repas */ 
 @keyframes fadeIn_appetizer{
@@ -448,7 +456,7 @@ footer
             border-bottom-right-radius: 15px;
             background-color: $green-cyan;
             opacity: 1;
-            animation: appear_box_choice 0.4s forwards;
+            animation: appear_box_choice 0.4s forwards;            
         }           
         .fas.fa-check-circle
         {
@@ -468,8 +476,6 @@ footer
             animation: reduction_box 0.4s forwards;
         }    
     }
-
-
     .fas.fa-check-circle
     {
         display: none;

@@ -178,6 +178,14 @@ Section site presentation et research city and restaurant*/
   border-radius: 25px;
   -webkit-box-shadow: 5px 5px 5px #d4d4d4;
           box-shadow: 5px 5px 5px #d4d4d4;
+  /* &:hover
+    {
+        background-color: $blue-magenta-light;
+        .fas
+        {
+            color: $blue-magenta;
+        }
+    } */
 }
 
 .box_functioning .number_functioning {
@@ -210,12 +218,21 @@ Section site presentation et research city and restaurant*/
   margin-left: 25px;
 }
 
-.box_functioning:hover {
-  background-color: #f5edff;
+.box_number_one {
+  -webkit-animation: animation_box_number_one 1s infinite;
+          animation: animation_box_number_one 1s infinite;
 }
 
-.box_functioning:hover .fas {
-  color: #9356DC;
+@-webkit-keyframes animation_box_number_one {
+  100% {
+    background-color: #f5edff;
+  }
+}
+
+@keyframes animation_box_number_one {
+  100% {
+    background-color: #f5edff;
+  }
 }
 
 #listing_restaurants {
@@ -413,24 +430,20 @@ footer {
 
 .appetizer_menu {
   opacity: 0;
-  -webkit-animation: fadeIn_appetizer ease 3s forwards;
-          animation: fadeIn_appetizer ease 3s forwards;
+  -webkit-animation: fadeIn_appetizer ease 3s forwards 0.5s;
+          animation: fadeIn_appetizer ease 3s forwards 0.5s;
 }
 
 .main_course_menu {
   opacity: 0;
-  -webkit-animation: fadeIn_maincourse ease 3s forwards;
-          animation: fadeIn_maincourse ease 3s forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation: fadeIn_maincourse ease 3s forwards 1.5s;
+          animation: fadeIn_maincourse ease 3s forwards 1.5s;
 }
 
 .dessert_menu {
   opacity: 0;
-  -webkit-animation: fadeIn_dessert ease 3s forwards;
-          animation: fadeIn_dessert ease 3s forwards;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation: fadeIn_dessert ease 3s forwards 2.5s;
+          animation: fadeIn_dessert ease 3s forwards 2.5s;
 }
 
 /* keyframes appear differents parts of repas */

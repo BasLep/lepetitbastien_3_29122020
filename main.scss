@@ -21,6 +21,7 @@ $white: #FFFFFF ;
 $grey-light: #eaeaea;
 $grey-more-light: #f6f6f6 ;
 $blue-magenta: #9356DC ; /* primary color */
+$blue-magenta-light: #f5edff ;
 $magenta-light: #FF79DA ; /* secondary color */
 $green-cyan: #99E2D0 ; /* tertiary color */ 
 $color-shadow: #d4d4d4 ;
@@ -32,7 +33,7 @@ $color_footer: #353535 ;
     font-size: larger;
     margin: 0;
 }
-p
+p, h2
 {
     margin: 0;
 }
@@ -169,6 +170,14 @@ Section site presentation et research city and restaurant*/
         font-weight: bold;
         margin-left: 25px;
     }
+    &:hover
+    {
+        background-color: $blue-magenta-light;
+        .fas
+        {
+            color: $blue-magenta;
+        }
+    }
 }
 #listing_restaurants
 {                
@@ -187,7 +196,6 @@ Section site presentation et research city and restaurant*/
     flex-direction: column;
     width: calc(100% - 20px);
     background-color: $white;
-
     border-radius: 20px;
     margin-bottom: 15px;
     box-shadow: 5px 5px 5px $color-shadow;
@@ -336,7 +344,55 @@ footer
 .appetizer_menu, .main_course_menu, .dessert_menu
 {
     margin-top: 30px;
-}   
+}
+.appetizer_menu
+{
+    opacity: 0;
+    animation: fadeIn_appetizer ease 3s forwards;
+}
+.main_course_menu
+{
+    opacity: 0;
+    animation: fadeIn_maincourse ease 3s forwards;
+    animation-delay: 1s;
+}
+.dessert_menu
+{
+    opacity: 0;
+    animation: fadeIn_dessert ease 3s forwards;
+    animation-delay: 2s;
+}
+/* keyframes appear differents parts of repas */ 
+@keyframes fadeIn_appetizer{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn_maincourse{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn_dessert{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
 .title_repas
 {
     margin-left: 20px ;
@@ -358,15 +414,18 @@ footer
         margin: 0;
         font-size: medium;
         padding: 12px 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
     .additional_information
     {
         font-size: smaller;
         padding: 0 0 12px 10px;
-        white-space: nowrap;
         width: 80%;
         text-overflow: ellipsis;
         overflow: hidden;
+        white-space: nowrap;
     }
     .price
     {
@@ -404,17 +463,18 @@ footer
         {
             animation: price_translation 0.4s forwards;
         }
-       .additional_information
+       .name_repas, .additional_information
         {
             animation: reduction_box 0.4s forwards;
-        }
-
+        }    
     }
+
+
     .fas.fa-check-circle
     {
         display: none;
     }
-
+    /* keyframes animation appear check box in menu food */
     @keyframes appear_box_choice {
         0%
         {
@@ -451,7 +511,7 @@ footer
         {
             width: 58%;
         }
-    } 
+    }
 }
 .box_command
 {

@@ -27,7 +27,7 @@ color */
   margin: 0;
 }
 
-p {
+p, h2 {
   margin: 0;
 }
 
@@ -208,6 +208,14 @@ Section site presentation et research city and restaurant*/
   font-size: smaller;
   font-weight: bold;
   margin-left: 25px;
+}
+
+.box_functioning:hover {
+  background-color: #f5edff;
+}
+
+.box_functioning:hover .fas {
+  color: #9356DC;
 }
 
 #listing_restaurants {
@@ -403,6 +411,82 @@ footer {
   margin-top: 30px;
 }
 
+.appetizer_menu {
+  opacity: 0;
+  -webkit-animation: fadeIn_appetizer ease 3s forwards;
+          animation: fadeIn_appetizer ease 3s forwards;
+}
+
+.main_course_menu {
+  opacity: 0;
+  -webkit-animation: fadeIn_maincourse ease 3s forwards;
+          animation: fadeIn_maincourse ease 3s forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.dessert_menu {
+  opacity: 0;
+  -webkit-animation: fadeIn_dessert ease 3s forwards;
+          animation: fadeIn_dessert ease 3s forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+/* keyframes appear differents parts of repas */
+@-webkit-keyframes fadeIn_appetizer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn_appetizer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn_maincourse {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn_maincourse {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn_dessert {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn_dessert {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .title_repas {
   margin-left: 20px;
   border-bottom: 2px #99E2D0 solid;
@@ -419,21 +503,25 @@ footer {
   margin-left: 15px;
   width: calc(100% - 30px);
   position: relative;
+  /* keyframes animation appear check box in menu food */
 }
 
 .box_repas .name_repas {
   margin: 0;
   font-size: medium;
   padding: 12px 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .box_repas .additional_information {
   font-size: smaller;
   padding: 0 0 12px 10px;
-  white-space: nowrap;
   width: 80%;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .box_repas .price {
@@ -477,7 +565,7 @@ footer {
           animation: price_translation 0.4s forwards;
 }
 
-.box_repas:active .additional_information {
+.box_repas:active .name_repas, .box_repas:active .additional_information {
   -webkit-animation: reduction_box 0.4s forwards;
           animation: reduction_box 0.4s forwards;
 }

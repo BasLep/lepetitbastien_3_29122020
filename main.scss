@@ -1,14 +1,4 @@
 /* Elément généraux */
-@font-face
-{
-    font-family: 'Roboto';
-    src: url(Roboto/Roboto-Regular.ttf) format('truetype');
-}
-@font-face
-{
-    font-family: 'Shrikhand';
-    src: url(Shrikhand/Shrikhand-Regular.ttf) format('truetype');
-}
 body
 {
     margin: 0; padding: 0;
@@ -179,7 +169,7 @@ Section site presentation et research city and restaurant*/
         }
     }
 }
-.box_number_one
+/* .box_number_one
 {
     animation: animation_box_number_one 1s infinite ;
 }
@@ -188,7 +178,7 @@ Section site presentation et research city and restaurant*/
     {
         background-color: $blue-magenta-light;
     }
-}
+} */
 #listing_restaurants
 {                
     padding-left: 20px;
@@ -358,47 +348,29 @@ footer
 .appetizer_menu
 {
     opacity: 0;
-    animation: fadeIn_appetizer ease 3s forwards 0.5s;
+    animation: fadeIn_menu ease 3s forwards 0.5s;
 }
 .main_course_menu
 {
     opacity: 0;
-    animation: fadeIn_maincourse ease 3s forwards 1.5s;
+    animation: fadeIn_menu ease 3s forwards 1.5s;
 }
 .dessert_menu
 {
     opacity: 0;
-    animation: fadeIn_dessert ease 3s forwards 2.5s;
+    animation: fadeIn_menu ease 3s forwards 2.5s;
 }
 /* keyframes appear differents parts of repas */ 
-@keyframes fadeIn_appetizer{
+@keyframes fadeIn_menu{
     0%
     {
         opacity: 0;
+        transform: translateY(20px);
     }
     100%
     {
         opacity: 1;
-    }
-}
-@keyframes fadeIn_maincourse{
-    0%
-    {
-        opacity: 0;
-    }
-    100%
-    {
-        opacity: 1;
-    }
-}
-@keyframes fadeIn_dessert{
-    0%
-    {
-        opacity: 0;
-    }
-    100%
-    {
-        opacity: 1;
+        transform: translateY(0px)
     }
 }
 .title_repas
@@ -443,7 +415,7 @@ footer
         bottom: 12px;
         right: 20px;
     }
-    &:active
+    &:hover
     {
         .box_choice_food
         {
@@ -456,7 +428,7 @@ footer
             border-bottom-right-radius: 15px;
             background-color: $green-cyan;
             opacity: 1;
-            animation: appear_box_choice 0.4s forwards;            
+            animation: appear_box_choice 0.4s forwards;           
         }           
         .fas.fa-check-circle
         {

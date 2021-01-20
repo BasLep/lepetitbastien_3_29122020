@@ -1,15 +1,5 @@
 @charset "UTF-8";
 /* Elément généraux */
-@font-face {
-  font-family: 'Roboto';
-  src: url(Roboto/Roboto-Regular.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: 'Shrikhand';
-  src: url(Shrikhand/Shrikhand-Regular.ttf) format("truetype");
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -178,14 +168,6 @@ Section site presentation et research city and restaurant*/
   border-radius: 25px;
   -webkit-box-shadow: 5px 5px 5px #d4d4d4;
           box-shadow: 5px 5px 5px #d4d4d4;
-  /* &:hover
-    {
-        background-color: $blue-magenta-light;
-        .fas
-        {
-            color: $blue-magenta;
-        }
-    } */
 }
 
 .box_functioning .number_functioning {
@@ -218,23 +200,24 @@ Section site presentation et research city and restaurant*/
   margin-left: 25px;
 }
 
-.box_number_one {
-  -webkit-animation: animation_box_number_one 1s infinite;
-          animation: animation_box_number_one 1s infinite;
+.box_functioning:hover {
+  background-color: #f5edff;
 }
 
-@-webkit-keyframes animation_box_number_one {
-  100% {
-    background-color: #f5edff;
-  }
+.box_functioning:hover .fas {
+  color: #9356DC;
 }
 
-@keyframes animation_box_number_one {
-  100% {
-    background-color: #f5edff;
-  }
+/* .box_number_one
+{
+    animation: animation_box_number_one 1s infinite ;
 }
-
+@keyframes animation_box_number_one{
+    100%
+    {
+        background-color: $blue-magenta-light;
+    }
+} */
 #listing_restaurants {
   padding-left: 20px;
   background-color: #f6f6f6;
@@ -430,73 +413,45 @@ footer {
 
 .appetizer_menu {
   opacity: 0;
-  -webkit-animation: fadeIn_appetizer ease 3s forwards 0.5s;
-          animation: fadeIn_appetizer ease 3s forwards 0.5s;
+  -webkit-animation: fadeIn_menu ease 3s forwards 0.5s;
+          animation: fadeIn_menu ease 3s forwards 0.5s;
 }
 
 .main_course_menu {
   opacity: 0;
-  -webkit-animation: fadeIn_maincourse ease 3s forwards 1.5s;
-          animation: fadeIn_maincourse ease 3s forwards 1.5s;
+  -webkit-animation: fadeIn_menu ease 3s forwards 1.5s;
+          animation: fadeIn_menu ease 3s forwards 1.5s;
 }
 
 .dessert_menu {
   opacity: 0;
-  -webkit-animation: fadeIn_dessert ease 3s forwards 2.5s;
-          animation: fadeIn_dessert ease 3s forwards 2.5s;
+  -webkit-animation: fadeIn_menu ease 3s forwards 2.5s;
+          animation: fadeIn_menu ease 3s forwards 2.5s;
 }
 
 /* keyframes appear differents parts of repas */
-@-webkit-keyframes fadeIn_appetizer {
+@-webkit-keyframes fadeIn_menu {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
-@keyframes fadeIn_appetizer {
+@keyframes fadeIn_menu {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
   }
   100% {
     opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadeIn_maincourse {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn_maincourse {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadeIn_dessert {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn_dessert {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 
@@ -545,7 +500,7 @@ footer {
   right: 20px;
 }
 
-.box_repas:active .box_choice_food {
+.box_repas:hover .box_choice_food {
   border: none;
   position: absolute;
   bottom: 0;
@@ -559,7 +514,7 @@ footer {
           animation: appear_box_choice 0.4s forwards;
 }
 
-.box_repas:active .fas.fa-check-circle {
+.box_repas:hover .fas.fa-check-circle {
   color: #FFFFFF;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -573,12 +528,12 @@ footer {
           animation: circle_rotate 0.4s forwards;
 }
 
-.box_repas:active .price {
+.box_repas:hover .price {
   -webkit-animation: price_translation 0.4s forwards;
           animation: price_translation 0.4s forwards;
 }
 
-.box_repas:active .name_repas, .box_repas:active .additional_information {
+.box_repas:hover .name_repas, .box_repas:hover .additional_information {
   -webkit-animation: reduction_box 0.4s forwards;
           animation: reduction_box 0.4s forwards;
 }

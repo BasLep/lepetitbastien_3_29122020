@@ -71,6 +71,79 @@ header h1 {
   font-size: 1.70em;
 }
 
+/* loading spinner */
+#spin_loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  border: 16px solid #eaeaea;
+  border-radius: 50%;
+  border-top: 16px solid #9356DC;
+  -webkit-animation: spin 3s linear forwards;
+          animation: spin 3s linear forwards;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+header, #section_presentation-site_research, #section_functioning, #listing_restaurants, footer {
+  -webkit-animation: animate_index_bottom 1s linear forwards;
+          animation: animate_index_bottom 1s linear forwards;
+  opacity: 0;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+@-webkit-keyframes animate_index_bottom {
+  0% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes animate_index_bottom {
+  0% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
 /* body 
 Section site presentation et research city and restaurant*/
 #research_city {
@@ -168,14 +241,6 @@ Section site presentation et research city and restaurant*/
   border-radius: 25px;
   -webkit-box-shadow: 5px 5px 5px #d4d4d4;
           box-shadow: 5px 5px 5px #d4d4d4;
-  /* &:hover
-    {
-        background-color: $blue-magenta-light;
-        .fas
-        {
-            color: $blue-magenta;
-        }
-    } */
 }
 
 .box_functioning .number_functioning {
@@ -211,31 +276,43 @@ Section site presentation et research city and restaurant*/
 .box_one {
   -webkit-animation: color_functioning_one ease 15s infinite;
           animation: color_functioning_one ease 15s infinite;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 .box_two {
   -webkit-animation: color_functioning_two ease 15s infinite;
           animation: color_functioning_two ease 15s infinite;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 .box_three {
   -webkit-animation: color_functioning_three ease 15s infinite;
           animation: color_functioning_three ease 15s infinite;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 .fa-mobile-alt {
   -webkit-animation: color_icon_mobile ease 15s infinite;
           animation: color_icon_mobile ease 15s infinite;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 .fa-list-ul {
   -webkit-animation: color_icon_list ease 15s infinite;
           animation: color_icon_list ease 15s infinite;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 .fa-store {
   -webkit-animation: color_icon_store ease 15s infinite;
           animation: color_icon_store ease 15s infinite;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 @-webkit-keyframes color_functioning_one {

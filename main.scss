@@ -94,7 +94,7 @@ header
         opacity: 0;
     }
 }
-header, #section_presentation-site_research, #section_functioning, #listing_restaurants, footer
+.header_index, #section_presentation-site_research, #section_functioning, #listing_restaurants, .footer_index
 {
     animation: animate_index_bottom 1s linear forwards;
     opacity: 0;
@@ -571,20 +571,26 @@ footer
         bottom: 12px;
         right: 20px;
     }
+    .box_choice_food
+    {
+        border: none;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 73px;
+        width: 0;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background-color: $green-cyan;
+        opacity: 0;
+        transition: width 0.4s;
+    }
     &:hover
     {
         .box_choice_food
         {
-            border: none;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            height: 73px;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-            background-color: $green-cyan;
             opacity: 1;
-            animation: appear_box_choice 0.4s forwards;           
+            width: 63px ;
         }           
         .fas.fa-check-circle
         {
@@ -609,17 +615,6 @@ footer
         display: none;
     }
     /* keyframes animation appear check box in menu food */
-    @keyframes appear_box_choice {
-        0%
-        {
-            width: 0;
-        }
-        100%
-        {
-            width: 63px;
-            opacity: 1;                
-        }
-    }
     @keyframes price_translation {
         0%
         {

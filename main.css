@@ -110,7 +110,7 @@ header h1 {
   }
 }
 
-header, #section_presentation-site_research, #section_functioning, #listing_restaurants, footer {
+.header_index, #section_presentation-site_research, #section_functioning, #listing_restaurants, .footer_index {
   -webkit-animation: animate_index_bottom 1s linear forwards;
           animation: animate_index_bottom 1s linear forwards;
   opacity: 0;
@@ -753,18 +753,24 @@ footer {
   right: 20px;
 }
 
-.box_repas:hover .box_choice_food {
+.box_repas .box_choice_food {
   border: none;
   position: absolute;
   bottom: 0;
   right: 0;
   height: 73px;
+  width: 0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #99E2D0;
+  opacity: 0;
+  -webkit-transition: width 0.4s;
+  transition: width 0.4s;
+}
+
+.box_repas:hover .box_choice_food {
   opacity: 1;
-  -webkit-animation: appear_box_choice 0.4s forwards;
-          animation: appear_box_choice 0.4s forwards;
+  width: 63px;
 }
 
 .box_repas:hover .fas.fa-check-circle {
@@ -793,26 +799,6 @@ footer {
 
 .box_repas .fas.fa-check-circle {
   display: none;
-}
-
-@-webkit-keyframes appear_box_choice {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 63px;
-    opacity: 1;
-  }
-}
-
-@keyframes appear_box_choice {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 63px;
-    opacity: 1;
-  }
 }
 
 @-webkit-keyframes price_translation {

@@ -170,13 +170,105 @@ Section site presentation et research city and restaurant*/
         font-weight: bold;
         margin-left: 25px;
     }
-    &:hover
+    /* &:hover
     {
         background-color: $blue-magenta-light;
         .fas
         {
             color: $blue-magenta;
         }
+    } */
+}
+.box_one
+{
+    animation: color_functioning_one ease 15s infinite;
+}
+.box_two
+{
+    animation: color_functioning_two ease 15s infinite;
+}
+.box_three
+{
+    animation: color_functioning_three ease 15s infinite;
+}
+.fa-mobile-alt
+{
+    animation: color_icon_mobile ease 15s infinite;
+}
+.fa-list-ul
+{
+    animation: color_icon_list ease 15s infinite;
+}
+.fa-store
+{
+    animation: color_icon_store ease 15s infinite;
+}
+@keyframes color_functioning_one{
+    0%
+    {
+        background-color: $blue-magenta-light;
+    }
+    33%, 100%
+    {
+        background-color: $grey-more-light;
+    }
+}
+@keyframes color_functioning_two{
+    0%
+    {
+        background-color: $grey-more-light;
+    }
+    34%
+    {
+        background-color: $blue-magenta-light;
+    }
+    66%, 100%
+    {
+        background-color: $grey-more-light;
+    }
+}
+@keyframes color_functioning_three{
+    0%
+    {
+        background-color: $grey-more-light;
+    }
+    67%, 99%
+    {
+        background-color: $blue-magenta-light;
+    }
+}
+@keyframes color_icon_mobile{
+    0%
+    {
+        color: $blue-magenta;
+    }
+    33%, 100%
+    {
+        color: $grey-dark;
+    }
+}
+@keyframes color_icon_list{
+    0%
+    {
+        color: $grey-dark;
+    }
+    34%
+    {
+        color: $blue-magenta;
+    }
+    66%, 100%
+    {
+        color: $grey-dark;
+    }
+}
+@keyframes color_icon_store{
+    0%
+    {
+        color: $grey-dark;
+    }
+    67%, 99%
+    {
+        color: $blue-magenta;
     }
 }
 #listing_restaurants
@@ -237,19 +329,42 @@ Section site presentation et research city and restaurant*/
             font-size: medium;
         }
     }
-    .far.fa-heart
+    .heart_position
     {
         position: absolute;
-        bottom: 30px;
+        bottom: 25px;
         right: 30px;
         font-size: x-large;
-        &:hover
+        cursor: pointer;
+        &:not(:active)
         {
-            cursor: pointer;
+            .fas.fa-heart
+            {
+                display: none;
+            }
         }
         &:active
         {
-            background: linear-gradient(to bottom, $magenta-light, $blue-magenta);
+            .far.fa-heart
+            {
+                display: none;
+            }
+            .fas.fa-heart
+            {
+                display: initial;
+                animation: heart_color_index ease 0.8s forwards;
+            }
+        }
+        @keyframes heart_color_index {
+            0%
+            {
+                color: white;
+            }
+            100%
+            {
+                color: $blue-magenta ;
+                opacity: 1;
+            }
         }
     }
 }

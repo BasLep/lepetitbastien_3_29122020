@@ -178,6 +178,14 @@ Section site presentation et research city and restaurant*/
   border-radius: 25px;
   -webkit-box-shadow: 5px 5px 5px #d4d4d4;
           box-shadow: 5px 5px 5px #d4d4d4;
+  /* &:hover
+    {
+        background-color: $blue-magenta-light;
+        .fas
+        {
+            color: $blue-magenta;
+        }
+    } */
 }
 
 .box_functioning .number_functioning {
@@ -210,12 +218,154 @@ Section site presentation et research city and restaurant*/
   margin-left: 25px;
 }
 
-.box_functioning:hover {
-  background-color: #f5edff;
+.box_one {
+  -webkit-animation: color_functioning_one ease 15s infinite;
+          animation: color_functioning_one ease 15s infinite;
 }
 
-.box_functioning:hover .fas {
-  color: #9356DC;
+.box_two {
+  -webkit-animation: color_functioning_two ease 15s infinite;
+          animation: color_functioning_two ease 15s infinite;
+}
+
+.box_three {
+  -webkit-animation: color_functioning_three ease 15s infinite;
+          animation: color_functioning_three ease 15s infinite;
+}
+
+.fa-mobile-alt {
+  -webkit-animation: color_icon_mobile ease 15s infinite;
+          animation: color_icon_mobile ease 15s infinite;
+}
+
+.fa-list-ul {
+  -webkit-animation: color_icon_list ease 15s infinite;
+          animation: color_icon_list ease 15s infinite;
+}
+
+.fa-store {
+  -webkit-animation: color_icon_store ease 15s infinite;
+          animation: color_icon_store ease 15s infinite;
+}
+
+@-webkit-keyframes color_functioning_one {
+  0% {
+    background-color: #f5edff;
+  }
+  33%, 100% {
+    background-color: #f6f6f6;
+  }
+}
+
+@keyframes color_functioning_one {
+  0% {
+    background-color: #f5edff;
+  }
+  33%, 100% {
+    background-color: #f6f6f6;
+  }
+}
+
+@-webkit-keyframes color_functioning_two {
+  0% {
+    background-color: #f6f6f6;
+  }
+  34% {
+    background-color: #f5edff;
+  }
+  66%, 100% {
+    background-color: #f6f6f6;
+  }
+}
+
+@keyframes color_functioning_two {
+  0% {
+    background-color: #f6f6f6;
+  }
+  34% {
+    background-color: #f5edff;
+  }
+  66%, 100% {
+    background-color: #f6f6f6;
+  }
+}
+
+@-webkit-keyframes color_functioning_three {
+  0% {
+    background-color: #f6f6f6;
+  }
+  67%, 99% {
+    background-color: #f5edff;
+  }
+}
+
+@keyframes color_functioning_three {
+  0% {
+    background-color: #f6f6f6;
+  }
+  67%, 99% {
+    background-color: #f5edff;
+  }
+}
+
+@-webkit-keyframes color_icon_mobile {
+  0% {
+    color: #9356DC;
+  }
+  33%, 100% {
+    color: #7e7e7e;
+  }
+}
+
+@keyframes color_icon_mobile {
+  0% {
+    color: #9356DC;
+  }
+  33%, 100% {
+    color: #7e7e7e;
+  }
+}
+
+@-webkit-keyframes color_icon_list {
+  0% {
+    color: #7e7e7e;
+  }
+  34% {
+    color: #9356DC;
+  }
+  66%, 100% {
+    color: #7e7e7e;
+  }
+}
+
+@keyframes color_icon_list {
+  0% {
+    color: #7e7e7e;
+  }
+  34% {
+    color: #9356DC;
+  }
+  66%, 100% {
+    color: #7e7e7e;
+  }
+}
+
+@-webkit-keyframes color_icon_store {
+  0% {
+    color: #7e7e7e;
+  }
+  67%, 99% {
+    color: #9356DC;
+  }
+}
+
+@keyframes color_icon_store {
+  0% {
+    color: #7e7e7e;
+  }
+  67%, 99% {
+    color: #9356DC;
+  }
 }
 
 #listing_restaurants {
@@ -297,20 +447,46 @@ Section site presentation et research city and restaurant*/
   font-size: medium;
 }
 
-.information_restaurant_heart .far.fa-heart {
+.information_restaurant_heart .heart_position {
   position: absolute;
-  bottom: 30px;
+  bottom: 25px;
   right: 30px;
   font-size: x-large;
-}
-
-.information_restaurant_heart .far.fa-heart:hover {
   cursor: pointer;
 }
 
-.information_restaurant_heart .far.fa-heart:active {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+.information_restaurant_heart .heart_position:not(:active) .fas.fa-heart {
+  display: none;
+}
+
+.information_restaurant_heart .heart_position:active .far.fa-heart {
+  display: none;
+}
+
+.information_restaurant_heart .heart_position:active .fas.fa-heart {
+  display: initial;
+  -webkit-animation: heart_color_index ease 0.8s forwards;
+          animation: heart_color_index ease 0.8s forwards;
+}
+
+@-webkit-keyframes heart_color_index {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #9356DC;
+    opacity: 1;
+  }
+}
+
+@keyframes heart_color_index {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #9356DC;
+    opacity: 1;
+  }
 }
 
 a:hover, a:link, a:visited {

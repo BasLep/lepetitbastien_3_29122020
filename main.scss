@@ -72,12 +72,13 @@ header
 /* loading spinner */
 #spin_loader
 {
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 50%;
     z-index: 1;
     width: 120px;
     height: 120px;
+    margin: -76px 0 0 -76px;
     border: 16px solid $grey-light;
     border-radius: 50%;
     border-top: 16px solid $blue-magenta;
@@ -204,114 +205,46 @@ Section site presentation et research city and restaurant*/
         margin-left: 25px;
     }
 }
-.box_one
+.box_one, .box_two, .box_three
 {
-    animation: color_functioning_one ease 15s infinite;
+    animation: color_functioning ease 15s infinite;
+}
+.fa-mobile-alt, .fa-list-ul, .fa-store
+{
+    animation: color_icon ease 15s infinite;
+}
+.box_one, .fa-mobile-alt
+{
     animation-delay: 3s;
 }
-.box_two
+.box_two, .fa-list-ul
 {
-    animation: color_functioning_two ease 15s infinite;
-    animation-delay: 3s;
+    animation-delay: 8s;
 }
-.box_three
+.box_three, .fa-store
 {
-    animation: color_functioning_three ease 15s infinite;
-    animation-delay: 3s;
+    animation-delay: 13s;
 }
-.fa-mobile-alt
-{
-    animation: color_icon_mobile ease 15s infinite;
-    animation-delay: 3s;
-}
-.fa-list-ul
-{
-    animation: color_icon_list ease 15s infinite;
-    animation-delay: 3s;
-}
-.fa-store
-{
-    animation: color_icon_store ease 15s infinite;
-    animation-delay: 3s;
-}
-@keyframes color_functioning_one{
+@keyframes color_functioning{
     0%
     {
         background-color: $blue-magenta-light;
     }
-    33%, 100%
+    33%
     {
         background-color: $grey-more-light;
     }
 }
-@keyframes color_functioning_two{
-    0%
-    {
-        background-color: $grey-more-light;
-    }
-    34%
-    {
-        background-color: $blue-magenta-light;
-    }
-    66%, 100%
-    {
-        background-color: $grey-more-light;
-    }
-}
-@keyframes color_functioning_three{
-    0%
-    {
-        background-color: $grey-more-light;
-    }
-    67%, 99%
-    {
-        background-color: $blue-magenta-light;
-    }
-}
-@keyframes color_icon_mobile{
+@keyframes color_icon{
     0%
     {
         color: $blue-magenta;
     }
-    33%, 100%
+    33%
     {
         color: $grey-dark;
     }
 }
-@keyframes color_icon_list{
-    0%
-    {
-        color: $grey-dark;
-    }
-    34%
-    {
-        color: $blue-magenta;
-    }
-    66%, 100%
-    {
-        color: $grey-dark;
-    }
-}
-@keyframes color_icon_store{
-    0%
-    {
-        color: $grey-dark;
-    }
-    67%, 99%
-    {
-        color: $blue-magenta;
-    }
-}
-/* .box_number_one
-{
-    animation: animation_box_number_one 1s infinite ;
-}
-@keyframes animation_box_number_one{
-    100%
-    {
-        background-color: $blue-magenta-light;
-    }
-} */
 #listing_restaurants
 {                
     padding-left: 20px;
@@ -377,6 +310,19 @@ Section site presentation et research city and restaurant*/
         right: 30px;
         font-size: x-large;
         cursor: pointer;
+        .fas.fa-heart
+        {
+            display: initial;
+            background-image: linear-gradient(45deg, $magenta-light, $blue-magenta);
+            background-size: 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-text-fill-color: transparent;
+            opacity: 0;
+            transition: opacity 5s;
+        }
         &:not(:active)
         {
             .fas.fa-heart
@@ -392,19 +338,7 @@ Section site presentation et research city and restaurant*/
             }
             .fas.fa-heart
             {
-                display: initial;
-                animation: heart_color_index ease 0.8s forwards;
-            }
-        }
-        @keyframes heart_color_index {
-            0%
-            {
-                color: white;
-            }
-            100%
-            {
-                color: $blue-magenta ;
-                opacity: 1;
+               opacity: 1;
             }
         }
     }
@@ -582,14 +516,13 @@ footer
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
         background-color: $green-cyan;
-        opacity: 0;
         transition: width 0.4s;
     }
     &:hover
     {
         .box_choice_food
         {
-            opacity: 1;
+            
             width: 63px ;
         }           
         .fas.fa-check-circle
@@ -657,4 +590,15 @@ footer
 {
     position: relative;
     top: 230px;
+}
+
+/* responsive aspect */
+@media screen and (min-width: 600px)
+{
+    #footer_limit
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

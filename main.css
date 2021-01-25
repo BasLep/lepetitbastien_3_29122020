@@ -73,12 +73,13 @@ header h1 {
 
 /* loading spinner */
 #spin_loader {
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   z-index: 1;
   width: 120px;
   height: 120px;
+  margin: -76px 0 0 -76px;
   border: 16px solid #eaeaea;
   border-radius: 50%;
   border-top: 16px solid #9356DC;
@@ -273,178 +274,67 @@ Section site presentation et research city and restaurant*/
   margin-left: 25px;
 }
 
-.box_one {
-  -webkit-animation: color_functioning_one ease 15s infinite;
-          animation: color_functioning_one ease 15s infinite;
+.box_one, .box_two, .box_three {
+  -webkit-animation: color_functioning ease 15s infinite;
+          animation: color_functioning ease 15s infinite;
+}
+
+.fa-mobile-alt, .fa-list-ul, .fa-store {
+  -webkit-animation: color_icon ease 15s infinite;
+          animation: color_icon ease 15s infinite;
+}
+
+.box_one, .fa-mobile-alt {
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
 }
 
-.box_two {
-  -webkit-animation: color_functioning_two ease 15s infinite;
-          animation: color_functioning_two ease 15s infinite;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+.box_two, .fa-list-ul {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
 }
 
-.box_three {
-  -webkit-animation: color_functioning_three ease 15s infinite;
-          animation: color_functioning_three ease 15s infinite;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+.box_three, .fa-store {
+  -webkit-animation-delay: 13s;
+          animation-delay: 13s;
 }
 
-.fa-mobile-alt {
-  -webkit-animation: color_icon_mobile ease 15s infinite;
-          animation: color_icon_mobile ease 15s infinite;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-
-.fa-list-ul {
-  -webkit-animation: color_icon_list ease 15s infinite;
-          animation: color_icon_list ease 15s infinite;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-
-.fa-store {
-  -webkit-animation: color_icon_store ease 15s infinite;
-          animation: color_icon_store ease 15s infinite;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-
-@-webkit-keyframes color_functioning_one {
+@-webkit-keyframes color_functioning {
   0% {
     background-color: #f5edff;
   }
-  33%, 100% {
+  33% {
     background-color: #f6f6f6;
   }
 }
 
-@keyframes color_functioning_one {
+@keyframes color_functioning {
   0% {
     background-color: #f5edff;
   }
-  33%, 100% {
+  33% {
     background-color: #f6f6f6;
   }
 }
 
-@-webkit-keyframes color_functioning_two {
-  0% {
-    background-color: #f6f6f6;
-  }
-  34% {
-    background-color: #f5edff;
-  }
-  66%, 100% {
-    background-color: #f6f6f6;
-  }
-}
-
-@keyframes color_functioning_two {
-  0% {
-    background-color: #f6f6f6;
-  }
-  34% {
-    background-color: #f5edff;
-  }
-  66%, 100% {
-    background-color: #f6f6f6;
-  }
-}
-
-@-webkit-keyframes color_functioning_three {
-  0% {
-    background-color: #f6f6f6;
-  }
-  67%, 99% {
-    background-color: #f5edff;
-  }
-}
-
-@keyframes color_functioning_three {
-  0% {
-    background-color: #f6f6f6;
-  }
-  67%, 99% {
-    background-color: #f5edff;
-  }
-}
-
-@-webkit-keyframes color_icon_mobile {
+@-webkit-keyframes color_icon {
   0% {
     color: #9356DC;
   }
-  33%, 100% {
+  33% {
     color: #7e7e7e;
   }
 }
 
-@keyframes color_icon_mobile {
+@keyframes color_icon {
   0% {
     color: #9356DC;
   }
-  33%, 100% {
+  33% {
     color: #7e7e7e;
   }
 }
 
-@-webkit-keyframes color_icon_list {
-  0% {
-    color: #7e7e7e;
-  }
-  34% {
-    color: #9356DC;
-  }
-  66%, 100% {
-    color: #7e7e7e;
-  }
-}
-
-@keyframes color_icon_list {
-  0% {
-    color: #7e7e7e;
-  }
-  34% {
-    color: #9356DC;
-  }
-  66%, 100% {
-    color: #7e7e7e;
-  }
-}
-
-@-webkit-keyframes color_icon_store {
-  0% {
-    color: #7e7e7e;
-  }
-  67%, 99% {
-    color: #9356DC;
-  }
-}
-
-@keyframes color_icon_store {
-  0% {
-    color: #7e7e7e;
-  }
-  67%, 99% {
-    color: #9356DC;
-  }
-}
-
-/* .box_number_one
-{
-    animation: animation_box_number_one 1s infinite ;
-}
-@keyframes animation_box_number_one{
-    100%
-    {
-        background-color: $blue-magenta-light;
-    }
-} */
 #listing_restaurants {
   padding-left: 20px;
   background-color: #f6f6f6;
@@ -532,6 +422,20 @@ Section site presentation et research city and restaurant*/
   cursor: pointer;
 }
 
+.information_restaurant_heart .heart_position .fas.fa-heart {
+  display: initial;
+  background-image: linear-gradient(45deg, #FF79DA, #9356DC);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  opacity: 0;
+  -webkit-transition: opacity 5s;
+  transition: opacity 5s;
+}
+
 .information_restaurant_heart .heart_position:not(:active) .fas.fa-heart {
   display: none;
 }
@@ -541,29 +445,7 @@ Section site presentation et research city and restaurant*/
 }
 
 .information_restaurant_heart .heart_position:active .fas.fa-heart {
-  display: initial;
-  -webkit-animation: heart_color_index ease 0.8s forwards;
-          animation: heart_color_index ease 0.8s forwards;
-}
-
-@-webkit-keyframes heart_color_index {
-  0% {
-    color: white;
-  }
-  100% {
-    color: #9356DC;
-    opacity: 1;
-  }
-}
-
-@keyframes heart_color_index {
-  0% {
-    color: white;
-  }
-  100% {
-    color: #9356DC;
-    opacity: 1;
-  }
+  opacity: 1;
 }
 
 a:hover, a:link, a:visited {
@@ -763,13 +645,11 @@ footer {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #99E2D0;
-  opacity: 0;
   -webkit-transition: width 0.4s;
   transition: width 0.4s;
 }
 
 .box_repas:hover .box_choice_food {
-  opacity: 1;
   width: 63px;
 }
 
@@ -875,5 +755,21 @@ footer {
 .footer_menu {
   position: relative;
   top: 230px;
+}
+
+/* responsive aspect */
+@media screen and (min-width: 600px) {
+  #footer_limit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,7 @@
-@charset "UTF-8";
-/* Elément généraux */
+/* color */
+/* primary color */
+/* secondary color */
+/* tertiary color */
 body {
   margin: 0;
   padding: 0;
@@ -7,11 +9,6 @@ body {
   font-family: 'Roboto';
 }
 
-/* element which appear into different parts of the body 
-color */
-/* primary color */
-/* secondary color */
-/* tertiary color */
 .title_h2_index {
   font-size: larger;
   margin: 0;
@@ -21,8 +18,15 @@ p, h2 {
   margin: 0;
 }
 
-header, #section_functioning, .title_h2_index, .box_restaurant {
+header, #section_functioning, .title_h2_index, .box_restaurant, .name_restaurant_heart, .appetizer_menu, .main_course_menu, .dessert_menu {
+  min-width: 320px;
   max-width: 1440px;
+}
+
+a:hover, a:link, a:visited {
+  text-decoration: none;
+  outline: none;
+  color: black;
 }
 
 /* formatting base button */
@@ -45,7 +49,12 @@ header, #section_functioning, .title_h2_index, .box_restaurant {
   cursor: pointer;
 }
 
-/* header */
+#button_command {
+  margin: 40px 0 60px 0;
+  height: 55px;
+  width: 185px;
+}
+
 header {
   max-width: 1440px;
   margin-top: 20px;
@@ -71,7 +80,59 @@ header h1 {
   font-size: 1.70em;
 }
 
-/* loading spinner */
+footer {
+  background-color: #353535;
+}
+
+#footer_limit {
+  max-width: 1440px;
+  padding: 20px;
+  color: #FFFFFF;
+}
+
+#footer_limit #name_logo_footer {
+  margin: 0;
+  font-family: 'Shrikhand';
+  font-weight: unset;
+  margin-bottom: 20px;
+  font-size: medium;
+}
+
+#footer_limit .box_icon_txt, #footer_limit .box_only_txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: smaller;
+  margin-bottom: 10px;
+}
+
+#footer_limit .box_icon_txt p, #footer_limit .box_only_txt p {
+  padding-left: 10px;
+}
+
+#footer_limit .fa-utensils, #footer_limit .fa-hands-helping {
+  font-size: small;
+}
+
+#footer_limit a:link, #footer_limit a:visited {
+  color: white;
+}
+
+@media (min-width: 600px) {
+  #footer_limit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 #spin_loader {
   position: fixed;
   left: 50%;
@@ -145,8 +206,7 @@ header h1 {
   }
 }
 
-/* body 
-Section site presentation et research city and restaurant*/
+/* Section site presentation et research city and restaurant*/
 #research_city {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -205,6 +265,7 @@ Section site presentation et research city and restaurant*/
   font-weight: bold;
 }
 
+/* functioning site */
 #section_functioning {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -274,67 +335,7 @@ Section site presentation et research city and restaurant*/
   margin-left: 25px;
 }
 
-.box_one, .box_two, .box_three {
-  -webkit-animation: color_functioning ease 15s infinite;
-          animation: color_functioning ease 15s infinite;
-}
-
-.fa-mobile-alt, .fa-list-ul, .fa-store {
-  -webkit-animation: color_icon ease 15s infinite;
-          animation: color_icon ease 15s infinite;
-}
-
-.box_one, .fa-mobile-alt {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-
-.box_two, .fa-list-ul {
-  -webkit-animation-delay: 8s;
-          animation-delay: 8s;
-}
-
-.box_three, .fa-store {
-  -webkit-animation-delay: 13s;
-          animation-delay: 13s;
-}
-
-@-webkit-keyframes color_functioning {
-  0% {
-    background-color: #f5edff;
-  }
-  33% {
-    background-color: #f6f6f6;
-  }
-}
-
-@keyframes color_functioning {
-  0% {
-    background-color: #f5edff;
-  }
-  33% {
-    background-color: #f6f6f6;
-  }
-}
-
-@-webkit-keyframes color_icon {
-  0% {
-    color: #9356DC;
-  }
-  33% {
-    color: #7e7e7e;
-  }
-}
-
-@keyframes color_icon {
-  0% {
-    color: #9356DC;
-  }
-  33% {
-    color: #7e7e7e;
-  }
-}
-
+/* restaurant list */
 #listing_restaurants {
   padding-left: 20px;
   background-color: #f6f6f6;
@@ -448,51 +449,7 @@ Section site presentation et research city and restaurant*/
   opacity: 1;
 }
 
-a:hover, a:link, a:visited {
-  text-decoration: none;
-  outline: none;
-  color: black;
-}
-
-footer {
-  background-color: #353535;
-}
-
-#footer_limit {
-  max-width: 1440px;
-  padding: 20px;
-  color: #FFFFFF;
-}
-
-#footer_limit #name_logo_footer {
-  margin: 0;
-  font-family: 'Shrikhand';
-  font-weight: unset;
-  margin-bottom: 20px;
-  font-size: medium;
-}
-
-#footer_limit .box_icon_txt, #footer_limit .box_only_txt {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: smaller;
-  margin-bottom: 10px;
-}
-
-#footer_limit .box_icon_txt p, #footer_limit .box_only_txt p {
-  padding-left: 10px;
-}
-
-#footer_limit .fa-utensils, #footer_limit .fa-hands-helping {
-  font-size: small;
-}
-
-#footer_limit a:link, #footer_limit a:visited {
-  color: white;
-}
-
-/* page menu elements */
+/* disposition page */
 .box_img_menu {
   position: absolute;
 }
@@ -502,11 +459,6 @@ footer {
      object-fit: cover;
   height: 275px;
   width: 100%;
-}
-
-.name_restaurant_heart, .appetizer_menu, .main_course_menu, .dessert_menu {
-  min-width: 320px;
-  max-width: 1440px;
 }
 
 .section_choice_menu {
@@ -546,50 +498,7 @@ footer {
   margin-top: 30px;
 }
 
-.appetizer_menu {
-  opacity: 0;
-  -webkit-animation: fadeIn_menu ease 3s forwards 0.5s;
-          animation: fadeIn_menu ease 3s forwards 0.5s;
-}
-
-.main_course_menu {
-  opacity: 0;
-  -webkit-animation: fadeIn_menu ease 3s forwards 1.5s;
-          animation: fadeIn_menu ease 3s forwards 1.5s;
-}
-
-.dessert_menu {
-  opacity: 0;
-  -webkit-animation: fadeIn_menu ease 3s forwards 2.5s;
-          animation: fadeIn_menu ease 3s forwards 2.5s;
-}
-
-/* keyframes appear differents parts of repas */
-@-webkit-keyframes fadeIn_menu {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-}
-@keyframes fadeIn_menu {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-}
-
+/* dispositon box repas */
 .title_repas {
   margin-left: 20px;
   border-bottom: 2px #99E2D0 solid;
@@ -606,7 +515,6 @@ footer {
   margin-left: 15px;
   width: calc(100% - 30px);
   position: relative;
-  /* keyframes animation appear check box in menu food */
 }
 
 .box_repas .name_repas {
@@ -649,6 +557,132 @@ footer {
   transition: width 0.4s;
 }
 
+/* box_command */
+.box_command {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* footer menu */
+.footer_menu {
+  position: relative;
+  top: 230px;
+}
+
+/* animation index */
+/* animation box functioning */
+.box_one, .box_two, .box_three {
+  -webkit-animation: color_functioning ease 15s infinite;
+          animation: color_functioning ease 15s infinite;
+}
+
+.fa-mobile-alt, .fa-list-ul, .fa-store {
+  -webkit-animation: color_icon ease 15s infinite;
+          animation: color_icon ease 15s infinite;
+}
+
+.box_one, .fa-mobile-alt {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.box_two, .fa-list-ul {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+}
+
+.box_three, .fa-store {
+  -webkit-animation-delay: 13s;
+          animation-delay: 13s;
+}
+
+@-webkit-keyframes color_functioning {
+  0% {
+    background-color: #f5edff;
+  }
+  33% {
+    background-color: #f6f6f6;
+  }
+}
+
+@keyframes color_functioning {
+  0% {
+    background-color: #f5edff;
+  }
+  33% {
+    background-color: #f6f6f6;
+  }
+}
+
+@-webkit-keyframes color_icon {
+  0% {
+    color: #9356DC;
+  }
+  33% {
+    color: #7e7e7e;
+  }
+}
+
+@keyframes color_icon {
+  0% {
+    color: #9356DC;
+  }
+  33% {
+    color: #7e7e7e;
+  }
+}
+
+/* animation menu page */
+/* appear differents parts of repas */
+.appetizer_menu {
+  opacity: 0;
+  -webkit-animation: fadeIn_menu ease 3s forwards 0.5s;
+          animation: fadeIn_menu ease 3s forwards 0.5s;
+}
+
+.main_course_menu {
+  opacity: 0;
+  -webkit-animation: fadeIn_menu ease 3s forwards 1.5s;
+          animation: fadeIn_menu ease 3s forwards 1.5s;
+}
+
+.dessert_menu {
+  opacity: 0;
+  -webkit-animation: fadeIn_menu ease 3s forwards 2.5s;
+          animation: fadeIn_menu ease 3s forwards 2.5s;
+}
+
+@-webkit-keyframes fadeIn_menu {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn_menu {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+/* animation box choice food */
 .box_repas:hover .box_choice_food {
   width: 63px;
 }
@@ -677,7 +711,7 @@ footer {
           animation: reduction_box 0.4s forwards;
 }
 
-.box_repas .fas.fa-check-circle {
+.fas.fa-check-circle {
   display: none;
 }
 
@@ -734,42 +768,6 @@ footer {
 @keyframes reduction_box {
   100% {
     width: 58%;
-  }
-}
-
-.box_command {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.box_command #button_command {
-  margin: 40px 0 60px 0;
-  height: 55px;
-  width: 185px;
-}
-
-.footer_menu {
-  position: relative;
-  top: 230px;
-}
-
-/* responsive aspect */
-@media screen and (min-width: 600px) {
-  #footer_limit {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 /*# sourceMappingURL=main.css.map */

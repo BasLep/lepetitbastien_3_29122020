@@ -1,0 +1,113 @@
+/* disposition page */ 
+.box_img_menu
+{
+    position: absolute;
+}
+.img_page_menu
+{
+    object-fit: cover;
+    height: 275px;
+    width: 100%;
+}
+.section_choice_menu
+{
+    
+    background-color: $grey-more-light;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    top: 230px ;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+.name_restaurant_heart
+{
+    padding-top: 30px;
+    position: relative;
+    .name_restaurant_menu
+    {
+        font-family: 'shrikhand';
+        font-size: 1.70em;
+        margin-left: 20px;
+    }
+    .far.fa-heart
+    {
+        position: absolute;
+        right: 4%;
+        font-size: x-large;
+    }
+} 
+.appetizer_menu, .main_course_menu, .dessert_menu
+{
+    margin-top: 30px;
+}
+/* dispositon box repas */
+.title_repas
+{
+    margin-left: 20px ;
+    border-bottom: 2px $green-cyan solid;
+    padding-bottom: 10px;
+    padding-right: 0;
+}
+.box_repas
+{
+    background-color: $white;
+    margin-top: 15px ;
+    box-shadow: 5px 5px 5px $color-shadow;
+    border-radius: 15px;
+    margin-left: 15px;
+    width: calc(100% - 30px);
+    position: relative;
+    .name_repas 
+    {
+        margin: 0;
+        font-size: medium;
+        padding: 12px 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .additional_information
+    {
+        font-size: smaller;
+        padding: 0 0 12px 10px;
+        width: 80%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .price
+    {
+        font-size: smaller;
+        font-weight: bold;
+        position: absolute;
+        bottom: 12px;
+        right: 20px;
+    }
+    .box_choice_food
+    {
+        border: none;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 73px;
+        width: 0;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background-color: $green-cyan;
+        transition: width 0.4s;
+    }
+}
+/* box_command */
+.box_command
+{
+    display: flex;
+    justify-content: center;
+}
+/* footer menu */
+.footer_menu
+{
+    position: relative;
+    top: 230px;
+}

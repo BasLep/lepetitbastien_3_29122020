@@ -1,0 +1,42 @@
+footer
+{
+    background-color: $color_footer;
+}    
+#footer_limit
+{
+    max-width: 1440px;
+    padding: 20px ;
+    color: $white;
+    #name_logo_footer
+    {
+    margin: 0;
+    font-family: 'Shrikhand';    
+    font-weight: unset;
+    margin-bottom: 20px;
+    font-size: medium;
+    }
+    .box_icon_txt, .box_only_txt
+    {
+        display: flex;
+        font-size: smaller;
+        margin-bottom: 10px;
+        p
+        {
+            padding-left: 10px;
+        }
+    }
+    .fa-utensils, .fa-hands-helping
+    {
+       font-size: small;
+    }
+    a:link, a:visited
+    {
+        color: white;
+    }
+    @media (min-width: 600px)
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

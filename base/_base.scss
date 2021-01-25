@@ -1,0 +1,26 @@
+body
+{
+    margin: 0; padding: 0;
+    margin: auto;
+    font-family: 'Roboto';
+}
+.title_h2_index
+{
+    font-size: larger;
+    margin: 0;
+}
+p, h2
+{
+    margin: 0;
+}
+header, #section_functioning, .title_h2_index, .box_restaurant, .name_restaurant_heart, .appetizer_menu, .main_course_menu, .dessert_menu
+{
+    min-width: 320px;
+    max-width: 1440px;
+}
+a:hover, a:link, a:visited
+{
+    text-decoration: none;
+    outline: none;
+    color: black;
+}

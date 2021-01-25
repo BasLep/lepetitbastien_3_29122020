@@ -1,0 +1,43 @@
+#spin_loader
+{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid $grey-light;
+    border-radius: 50%;
+    border-top: 16px solid $blue-magenta;
+    animation: spin 3s linear forwards;
+}
+@keyframes spin{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+.header_index, #section_presentation-site_research, #section_functioning, #listing_restaurants, .footer_index
+{
+    animation: animate_index_bottom 1s linear forwards;
+    opacity: 0;
+    animation-delay: 2s;
+}
+@keyframes animate_index_bottom{
+    0%
+    {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

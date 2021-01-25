@@ -1,0 +1,190 @@
+/* Section site presentation et research city and restaurant*/
+#research_city
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: $grey-light;
+    height: 50px;
+    font-size: smaller;
+    #zone_research_city
+    {
+        font-weight: bold;
+        margin-left: 20px;
+    }
+}
+#information_site_restaurant
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: $grey-more-light;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    margin-bottom: 50px;
+    .title_h2_index
+    {
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-bottom: 20px;
+    }
+    #text_information
+    {
+        margin-bottom: 30px;
+    }    
+    #button_research_restaurant
+    {
+        height: 50px;
+        width: 200px;
+        font-weight: bold;
+    }
+}
+/* functioning site */ 
+#section_functioning
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    .title_h2_index
+    {
+        margin-bottom: 30px;
+    }
+}
+.box_functioning
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    margin-bottom: 25px;
+    width: calc(100% - 20px);
+    background-color: $grey-more-light;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px $color-shadow;
+    .number_functioning
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: small;
+        color: $white ;
+        width: 20px;
+        height: 20px;
+        border-radius: 50px;
+        background-color: $blue-magenta;
+        position: absolute;
+        left: 12px;
+    }
+    .fas
+    {
+        color: $grey-dark;
+    }
+    .information_functioning
+    {
+        font-size: smaller;
+        font-weight: bold;
+        margin-left: 25px;
+    }
+}
+/* restaurant list */
+#listing_restaurants
+{                
+    padding-left: 20px;
+    background-color: $grey-more-light;
+    margin-bottom: 70px;
+    .title_h2_index
+    {
+        padding-top: 60px;
+        margin-bottom: 30px;
+    }
+}
+.box_restaurant
+{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 20px);
+    background-color: $white;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    box-shadow: 5px 5px 5px $color-shadow;
+}
+.box_img_link
+{    
+    height: 180px;
+    .img_restaurant
+    {
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height: calc(100% - 15px);
+    }
+}
+.information_restaurant_heart
+{
+    display:flex ;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .name_localisation
+    {
+        display: flex;
+        flex-direction: column;
+        padding-left: 15px;
+        padding-bottom: 15px;        
+        .name_restaurant
+        {
+            margin: 0;
+            font-size: large;
+            margin-bottom: 3px;
+        }
+        .city_restaurant
+        {
+            font-size: medium;
+        }
+    }
+    .heart_position
+    {
+        position: absolute;
+        bottom: 25px;
+        right: 30px;
+        font-size: x-large;
+        cursor: pointer;
+        .fas.fa-heart
+        {
+            display: initial;
+            background-image: linear-gradient(45deg, $magenta-light, $blue-magenta);
+            background-size: 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-text-fill-color: transparent;
+            opacity: 0;
+            transition: opacity 5s;
+        }
+        &:not(:active)
+        {
+            .fas.fa-heart
+            {
+                display: none;
+            }
+        }
+        &:active
+        {
+            .far.fa-heart
+            {
+                display: none;
+            }
+            .fas.fa-heart
+            {
+               opacity: 1;
+            }
+        }
+    }
+}

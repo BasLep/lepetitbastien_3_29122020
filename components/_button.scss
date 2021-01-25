@@ -1,0 +1,22 @@
+/* formatting base button */
+.button_page
+{
+    color: $white;
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px $color-shadow;
+    border: none;
+    background: linear-gradient(to bottom, $magenta-light, $blue-magenta);
+    transition-duration: 400ms;
+    &:hover
+    {
+        opacity: 0.8;
+        box-shadow: 10px 10px 5px $color-shadow;
+        cursor: pointer;
+    }
+}   
+#button_command
+{
+    margin: 40px 0 60px 0;
+    height: 55px;
+    width: 185px;
+}

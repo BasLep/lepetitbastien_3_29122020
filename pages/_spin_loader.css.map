@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "spin_loader.scss"
+    ],
+    "names": [],
+    "file": "spin_loader.css"
+}

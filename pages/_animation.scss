@@ -1,0 +1,128 @@
+/* animation index */
+/* animation box functioning */
+.box_one, .box_two, .box_three
+{
+    animation: color_functioning ease 15s infinite;
+}
+.fa-mobile-alt, .fa-list-ul, .fa-store
+{
+    animation: color_icon ease 15s infinite;
+}
+.box_one, .fa-mobile-alt
+{
+    animation-delay: 3s;
+}
+.box_two, .fa-list-ul
+{
+    animation-delay: 8s;
+}
+.box_three, .fa-store
+{
+    animation-delay: 13s;
+}
+@keyframes color_functioning{
+    0%
+    {
+        background-color: $blue-magenta-light;
+    }
+    33%
+    {
+        background-color: $grey-more-light;
+    }
+}
+@keyframes color_icon{
+    0%
+    {
+        color: $blue-magenta;
+    }
+    33%
+    {
+        color: $grey-dark;
+    }
+}
+
+/* animation menu page */
+/* appear differents parts of repas */
+.appetizer_menu
+{
+    opacity: 0;
+    animation: fadeIn_menu ease 3s forwards 0.5s;
+}
+.main_course_menu
+{
+    opacity: 0;
+    animation: fadeIn_menu ease 3s forwards 1.5s;
+}
+.dessert_menu
+{
+    opacity: 0;
+    animation: fadeIn_menu ease 3s forwards 2.5s;
+}
+@keyframes fadeIn_menu{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+}
+/* animation box choice food */
+.box_repas:hover
+    {
+        .box_choice_food
+        {
+            
+            width: 63px ;
+        }           
+        .fas.fa-check-circle
+        {
+            color: $white;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 40%;
+            animation: circle_rotate 0.4s forwards;
+        }
+        .price
+        {
+            animation: price_translation 0.4s forwards;
+        }
+       .name_repas, .additional_information
+        {
+            animation: reduction_box 0.4s forwards;
+        }    
+    }
+    .fas.fa-check-circle
+    {
+        display: none;
+    }
+    @keyframes price_translation {
+        0%
+        {
+            transform: translateX(0);
+        }
+        100%
+        {
+            transform: translateX(-63px);
+        }
+    }
+    @keyframes circle_rotate {
+        0%
+        {
+            transform: rotate(0) scale(1.40);
+        }
+        100%
+        {
+            transform: rotate(360deg) scale(1.40);
+        }
+    }
+    @keyframes reduction_box {
+        100%
+        {
+            width: 58%;
+        }
+    }

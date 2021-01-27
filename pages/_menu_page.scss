@@ -38,23 +38,39 @@
         font-size: x-large;
     }
 } 
+/* dispostion menu */
+.different_part_food
+{
+    @media (min-width: $width-desktop)
+    {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+}
 .appetizer_menu, .main_course_menu, .dessert_menu
 {
     margin-top: 30px;
+    @media (min-width: $width-desktop)
+    {
+        width: 33%;
+    }
 }
 /* dispositon box repas */
 .title_repas
 {
     margin-left: 20px ;
     border-bottom: 2px $green-cyan solid;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
     padding-right: 0;
+    display: flex;
+    width: 40px;
 }
 .box_repas
 {
     background-color: $white;
-    margin-top: 15px ;
-    box-shadow: 5px 5px 5px $color-shadow;
+    margin-top: 20px ;
+    @include box_shadow_page;
     border-radius: 15px;
     margin-left: 15px;
     width: calc(100% - 30px);

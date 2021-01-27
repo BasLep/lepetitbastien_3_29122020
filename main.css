@@ -2,6 +2,7 @@
 /* primary color */
 /* secondary color */
 /* tertiary color */
+/* width */
 body {
   margin: 0;
   padding: 0;
@@ -12,13 +13,28 @@ body {
 .title_h2_index {
   font-size: larger;
   margin: 0;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+@media (min-width: 1000px) {
+  .title_h2_index {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
 }
 
 p, h2 {
   margin: 0;
 }
 
-header, #section_functioning, .title_h2_index, .box_restaurant, .name_restaurant_heart, .appetizer_menu, .main_course_menu, .dessert_menu {
+.box_restaurant, .name_restaurant_heart, .appetizer_menu, .main_course_menu, .dessert_menu {
   min-width: 320px;
   max-width: 1440px;
 }
@@ -56,7 +72,6 @@ a:hover, a:link, a:visited {
 }
 
 header {
-  max-width: 1440px;
   margin-top: 20px;
   margin-bottom: 5px;
   display: -webkit-box;
@@ -250,8 +265,9 @@ footer {
 }
 
 #information_site_restaurant .title_h2_index {
-  margin-left: 60px;
-  margin-right: 60px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   margin-bottom: 20px;
 }
 
@@ -275,11 +291,9 @@ footer {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 40px;
-  margin-left: 20px;
-}
-
-#section_functioning .title_h2_index {
-  margin-bottom: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .box_functioning {
@@ -298,7 +312,7 @@ footer {
           align-items: center;
   height: 65px;
   margin-bottom: 25px;
-  width: calc(100% - 20px);
+  width: calc(100% - 40px);
   background-color: #f6f6f6;
   border-radius: 25px;
   -webkit-box-shadow: 5px 5px 5px #d4d4d4;
@@ -337,14 +351,22 @@ footer {
 
 /* restaurant list */
 #listing_restaurants {
-  padding-left: 20px;
   background-color: #f6f6f6;
   margin-bottom: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #listing_restaurants .title_h2_index {
   padding-top: 60px;
-  margin-bottom: 30px;
 }
 
 .box_restaurant {
@@ -355,7 +377,7 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: calc(100% - 20px);
+  width: calc(100% - 40px);
   background-color: #FFFFFF;
   border-radius: 20px;
   margin-bottom: 15px;
@@ -433,8 +455,8 @@ footer {
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   opacity: 0;
-  -webkit-transition: opacity 5s;
-  transition: opacity 5s;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
 }
 
 .information_restaurant_heart .heart_position:not(:active) .fas.fa-heart {
@@ -494,21 +516,47 @@ footer {
   font-size: x-large;
 }
 
+/* dispostion menu */
+@media (min-width: 1000px) {
+  .different_part_food {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .appetizer_menu, .main_course_menu, .dessert_menu {
   margin-top: 30px;
+}
+
+@media (min-width: 1000px) {
+  .appetizer_menu, .main_course_menu, .dessert_menu {
+    width: 33%;
+  }
 }
 
 /* dispositon box repas */
 .title_repas {
   margin-left: 20px;
   border-bottom: 2px #99E2D0 solid;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   padding-right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
 }
 
 .box_repas {
   background-color: #FFFFFF;
-  margin-top: 15px;
+  margin-top: 20px;
   -webkit-box-shadow: 5px 5px 5px #d4d4d4;
           box-shadow: 5px 5px 5px #d4d4d4;
   border-radius: 15px;
@@ -576,13 +624,13 @@ footer {
 /* animation index */
 /* animation box functioning */
 .box_one, .box_two, .box_three {
-  -webkit-animation: color_functioning ease 15s infinite;
-          animation: color_functioning ease 15s infinite;
+  -webkit-animation: color_functioning ease 10s infinite;
+          animation: color_functioning ease 10s infinite;
 }
 
 .fa-mobile-alt, .fa-list-ul, .fa-store {
-  -webkit-animation: color_icon ease 15s infinite;
-          animation: color_icon ease 15s infinite;
+  -webkit-animation: color_icon ease 10s infinite;
+          animation: color_icon ease 10s infinite;
 }
 
 .box_one, .fa-mobile-alt {
@@ -591,13 +639,13 @@ footer {
 }
 
 .box_two, .fa-list-ul {
-  -webkit-animation-delay: 8s;
-          animation-delay: 8s;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
 }
 
 .box_three, .fa-store {
-  -webkit-animation-delay: 13s;
-          animation-delay: 13s;
+  -webkit-animation-delay: 9s;
+          animation-delay: 9s;
 }
 
 @-webkit-keyframes color_functioning {

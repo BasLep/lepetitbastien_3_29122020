@@ -8,12 +8,20 @@ body
 {
     font-size: larger;
     margin: 0;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    align-self: start;
+    @media (min-width: $width-desktop)
+    {
+        display: flex;
+        align-self: center;
+    }
 }
 p, h2
 {
     margin: 0;
 }
-header, #section_functioning, .title_h2_index, .box_restaurant, .name_restaurant_heart, .appetizer_menu, .main_course_menu, .dessert_menu
+.box_restaurant, .name_restaurant_heart, .appetizer_menu, .main_course_menu, .dessert_menu
 {
     min-width: 320px;
     max-width: 1440px;

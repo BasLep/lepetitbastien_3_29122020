@@ -2,11 +2,11 @@
 /* animation box functioning */
 .box_one, .box_two, .box_three
 {
-    animation: color_functioning ease 15s infinite;
+    animation: color_functioning ease 10s infinite;
 }
 .fa-mobile-alt, .fa-list-ul, .fa-store
 {
-    animation: color_icon ease 15s infinite;
+    animation: color_icon ease 10s infinite;
 }
 .box_one, .fa-mobile-alt
 {
@@ -14,11 +14,11 @@
 }
 .box_two, .fa-list-ul
 {
-    animation-delay: 8s;
+    animation-delay: 6s;
 }
 .box_three, .fa-store
 {
-    animation-delay: 13s;
+    animation-delay: 9s;
 }
 @keyframes color_functioning{
     0%

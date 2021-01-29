@@ -151,7 +151,6 @@ footer {
   position: fixed;
   left: 50%;
   top: 50%;
-  z-index: 1;
   width: 120px;
   height: 120px;
   margin: -76px 0 0 -76px;
@@ -445,7 +444,9 @@ footer {
 }
 
 .information_restaurant_heart .heart_position .fas.fa-heart {
-  display: initial;
+  position: absolute;
+  bottom: 3px;
+  right: 0px;
   background-image: linear-gradient(45deg, #FF79DA, #9356DC);
   background-size: 100%;
   background-clip: text;
@@ -454,12 +455,12 @@ footer {
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   opacity: 0;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 
 .information_restaurant_heart .heart_position:not(:active) .fas.fa-heart {
-  display: none;
+  opacity: 0;
 }
 
 .information_restaurant_heart .heart_position:active .far.fa-heart {

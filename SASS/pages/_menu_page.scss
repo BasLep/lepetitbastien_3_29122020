@@ -1,129 +1,113 @@
-/* disposition page */ 
-.box_img_menu
-{
-    position: absolute;
+/* disposition page */
+.box_img_menu {
+	position: absolute;
+	width: 100%;
 }
-.img_page_menu
-{
-    object-fit: cover;
-    height: 275px;
-    width: 100%;
+.img_page_menu {
+	object-fit: cover;
+	height: 275px;
+	width: 100%;
 }
-.section_choice_menu
-{
-    
-    background-color: $grey-more-light;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    position: relative;
-    top: 230px ;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+.section_choice_menu {
+	background-color: $grey-more-light;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	position: relative;
+	top: 230px;
+	border-top-left-radius: 40px;
+	border-top-right-radius: 40px;
 }
-.name_restaurant_heart
-{
-    padding-top: 30px;
-    position: relative;
-    .name_restaurant_menu
-    {
-        font-family: 'shrikhand';
-        font-size: 1.70em;
-        margin-left: 20px;
-    }
-    .far.fa-heart
-    {
-        position: absolute;
-        right: 4%;
-        font-size: x-large;
-    }
-} 
+.name_restaurant_heart {
+	padding-top: 30px;
+	position: relative;
+	.name_restaurant_menu {
+		font-family: "shrikhand";
+		font-size: 1.7em;
+		margin-left: 20px;
+	}
+	.far.fa-heart {
+		position: absolute;
+		right: 4%;
+		font-size: x-large;
+	}
+}
 /* dispostion menu */
-.different_part_food
-{
-    @media (min-width: $width-desktop)
-    {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    }
+.different_part_food {
+	@media (min-width: $width-desktop) {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
 }
-.appetizer_menu, .main_course_menu, .dessert_menu
-{
-    margin-top: 30px;
-    @media (min-width: $width-desktop)
-    {
-        width: 33%;
-    }
+.appetizer_menu,
+.main_course_menu,
+.dessert_menu {
+	margin-top: 30px;
+	@media (min-width: $width-desktop) {
+		width: 33%;
+	}
 }
 /* dispositon box repas */
-.title_repas
-{
-    margin-left: 20px ;
-    border-bottom: 2px $green-cyan solid;
-    padding-bottom: 8px;
-    padding-right: 0;
-    display: flex;
-    width: 40px;
+.title_repas {
+	margin-left: 20px;
+	border-bottom: 2px $green-cyan solid;
+	padding-bottom: 8px;
+	padding-right: 0;
+	display: flex;
+	width: 40px;
 }
-.box_repas
-{
-    background-color: $white;
-    margin-top: 20px ;
-    @include box_shadow_page;
-    border-radius: 15px;
-    margin-left: 15px;
-    width: calc(100% - 30px);
-    position: relative;
-    .name_repas 
-    {
-        margin: 0;
-        font-size: medium;
-        padding: 12px 10px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-    }
-    .additional_information
-    {
-        font-size: smaller;
-        padding: 0 0 12px 10px;
-        width: 80%;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-    }
-    .price
-    {
-        font-size: smaller;
-        font-weight: bold;
-        position: absolute;
-        bottom: 12px;
-        right: 20px;
-    }
-    .box_choice_food
-    {
-        border: none;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        height: 73px;
-        width: 0;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        background-color: $green-cyan;
-        transition: width 0.4s;
-    }
+.box_repas {
+	background-color: $white;
+	margin-top: 20px;
+	@include box_shadow_page;
+	border-radius: 15px;
+	margin-left: 15px;
+	width: calc(100% - 30px);
+	position: relative;
+	.name_repas {
+		margin: 0;
+		font-size: medium;
+		padding: 12px 10px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	.additional_information {
+		font-size: smaller;
+		padding: 0 0 12px 10px;
+		width: 80%;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	.price {
+		font-size: smaller;
+		font-weight: bold;
+		position: absolute;
+		bottom: 12px;
+		right: 20px;
+	}
+	.box_choice_food {
+		border: none;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		height: 73px;
+		width: 0;
+		border-top-right-radius: 15px;
+		border-bottom-right-radius: 15px;
+		background-color: $green-cyan;
+		transition: width 0.4s;
+	}
 }
 /* box_command */
-.box_command
-{
-    display: flex;
-    justify-content: center;
+.box_command {
+	display: flex;
+	justify-content: center;
 }
 /* footer menu */
-.footer_menu
-{
-    position: relative;
-    top: 230px;
+.footer_menu {
+	position: relative;
+	top: 230px;
 }

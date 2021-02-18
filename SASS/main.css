@@ -468,11 +468,11 @@ footer {
   opacity: 0;
 }
 
-.information_restaurant_heart .heart_position:active .far.fa-heart {
+.information_restaurant_heart .heart_position:hover .far.fa-heart {
   display: none;
 }
 
-.information_restaurant_heart .heart_position:active .fas.fa-heart {
+.information_restaurant_heart .heart_position:hover .fas.fa-heart {
   opacity: 1;
 }
 
